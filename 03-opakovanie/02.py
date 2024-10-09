@@ -1,0 +1,5 @@
+name = input("zadaj meno: ")
+age = int(input("zadaj vek: "))
+print (name, "má", age, "rokov")
+print (name, "bude mať o rok", (age + 1))
+print(name, "bude mať o 10 rokov", (age + 10))
