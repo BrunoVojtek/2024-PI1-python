@@ -1,3 +1,3 @@
-a = int(input ("zadaj dĺžku strany: "))
-us = a * a//2
+a = int(input ("zadaj dĺžku strany kocky: "))
+us = (a * 1,41)
 print ("stenová uhlopriečka je", us)
