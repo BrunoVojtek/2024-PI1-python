@@ -26,9 +26,9 @@ def riadky_y(x,y,pocet_riadkov,pocet_stlpcov):
 
 
 
-yps(10,10,"black")
+yps(10,10,"yellow")
 
-riadok_y(10, 90,"black",  3)
+riadok_y(10, 90,"red",  3)
  
 # riadky_y(10, 180, 4, 5)
 
