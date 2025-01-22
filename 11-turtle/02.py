@@ -19,6 +19,7 @@
 # t.shape("turtle")
 # t.shapesize(5,5,8)
 # t.color("Darkgreen", "Green")
+# t.pu()
 # for i in range(1000):
 #     t.fd(5)
 #     t.rt(4)
@@ -32,7 +33,7 @@
 
 # t.shape("turtle")
 # t.shapesize(5,5,8)
-# t.color("Red","Blue")
+# t.color("Darkgreen","Green")
 # t.pu()
 # for i in range(10000):
 #     t.seth(random.randint(0, 359))

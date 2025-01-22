@@ -1,6 +1,6 @@
 import turtle
 t = turtle.Turtle()
-turtle.delay(0)
+# turtle.delay(0)
 t.hideturtle()
 
 dlzka = 10
