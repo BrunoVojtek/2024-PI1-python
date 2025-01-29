@@ -8,7 +8,7 @@
 # t = turtle.Turtle()
 # turtle.delay(1)
 # for n in range(3,16):
-#     t.clear()
+    # t.clear()
 #     nuholnik(n,50)
 
 # turtle.exitonclick()
@@ -32,7 +32,7 @@
 
 # t.shape("turtle")
 # t.shapesize(5,5,8)
-# t.color("Red","Blue")
+# t.color("Darkgreen","Green")
 # t.pu()
 # for i in range(10000):
 #     t.seth(random.randint(0, 359))
