@@ -26,7 +26,7 @@ for i in range (pocet):
         color = "Blue"
 
 
-    canvas.create_rectangle(x,y,x+velkost,y+velkost,fill=color, width=0)
+    canvas.create_rectangle(x,y,x+velkost,y+velkost,fill=color, width=0,)
 
 
 

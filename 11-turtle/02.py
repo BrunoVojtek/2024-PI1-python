@@ -1,4 +1,4 @@
-# import turtle
+import turtle
 
 # def nuholnik(n,d):
 #     for i in range(n):
@@ -15,14 +15,15 @@
 
 # import turtle
 
-# t = turtle.Turtle()
-# t.shape("turtle")
-# t.shapesize(5,5,8)
-# t.color("Darkgreen", "Green")
-# for i in range(1000):
-#     t.fd(5)
-#     t.rt(4)
-# turtle.exitonclick()
+t = turtle.Turtle()
+t.shape("turtle")
+t.shapesize(5,5,8)
+t.color("Darkgreen", "Green")
+t.pu()
+for i in range(1000):
+    t.fd(5)
+    t.rt(4)
+turtle.exitonclick()
 
 # import turtle
 # import random
