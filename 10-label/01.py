@@ -22,9 +22,6 @@ def AkciaTlacidla():
 root = tk.Tk()
 root.geometry ("200x200")
 
-button = tk.Button(root, text= "Apply", command= AkciaTlacidla)
-button.pack()
-
 cisloPC = rd.randint(0,9)
 
 label = tk.Label(root, text="Hádaj")
@@ -33,5 +30,7 @@ label.pack()
 textbox = tk.Entry(root)
 textbox.pack()
 
+button = tk.Button(root, text= "Apply", command= AkciaTlacidla)
+button.pack()
 
 tk.mainloop()
