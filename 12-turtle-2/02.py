@@ -1,8 +1,11 @@
 import turtle
 t = turtle.Turtle()
-turtle.delay(0)
-t.speed(0)
-t.hideturtle()
+# turtle.delay(0)
+# t.speed(0)
+# t.hideturtle()
+t.shape("turtle")
+t.shapesize(2,2,5)
+t.color("Darkgreen","Green")
 
 x = -450
 y = 350

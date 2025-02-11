@@ -15,28 +15,28 @@ import turtle
 
 # import turtle
 
-t = turtle.Turtle()
-t.shape("turtle")
-t.shapesize(5,5,8)
-t.color("Darkgreen", "Green")
-t.pu()
-for i in range(1000):
-    t.fd(5)
-    t.rt(4)
-turtle.exitonclick()
-
-# import turtle
-# import random
-
-# turtle.delay(0)
 # t = turtle.Turtle()
-
 # t.shape("turtle")
 # t.shapesize(5,5,8)
-# t.color("Darkgreen","Green")
+# t.color("Darkgreen", "Green")
 # t.pu()
-# for i in range(10000):
-#     t.seth(random.randint(0, 359))
-#     t.fd(10)
-# t.pd()
+# for i in range(1000):
+#     t.fd(5)
+#     t.rt(4)
 # turtle.exitonclick()
+
+import turtle
+import random
+
+turtle.delay(0)
+t = turtle.Turtle()
+
+t.shape("turtle")
+t.shapesize(5,5,8)
+t.color("Darkgreen","Green")
+t.pu()
+for i in range(10000):
+    t.seth(random.randint(0, 359))
+    t.fd(10)
+t.pd()
+turtle.exitonclick()
