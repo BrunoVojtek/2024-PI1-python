@@ -7,6 +7,8 @@ def on_entry_click(event):
     if entry.get() == "Zadaj veľkosť:":
         entry.delete(0, "end")
         entry.unbind('<FocusIn>')
+    else:
+        return
 
 def update_scale(event):
     try:
@@ -35,7 +37,7 @@ def tahaj(event):
     x, y = event.x, event.y
     canvas.create_oval(x - size, y - size, x + size, y + size, fill=current_color, outline=current_color)
 
-canvas = tk.Canvas()
+canvas = tk.Canvas(width=700, height=500)
 canvas.pack(side='left')
 canvas.bind('<B1-Motion>', tahaj)
 
@@ -45,6 +47,8 @@ def delete():
 tk.Button(text="Vymazať", command=delete).pack()
 
 tk.Button(text="Vyber farbu", command=choose_color).pack()
+
+tk.Button(text="Guma", background="white", command=lambda: change_color("White")).pack()
 
 entry = tk.Entry()
 entry.pack()
