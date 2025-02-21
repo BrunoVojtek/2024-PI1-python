@@ -1,48 +1,58 @@
 import tkinter as tk
+from tkinter import colorchooser
 
 current_color = 'red'
 
+def on_entry_click(event):
+    if entry.get() == "Zadaj veľkosť:":
+        entry.delete(0, "end")
+        entry.unbind('<FocusIn>')
 
+def update_scale(event):
+    try:
+        size = int(entry.get())
+        if 1 <= size <= 40:
+            velkost.set(size)
+    except ValueError:
+        pass
 
 def change_color(color):
     global current_color
     current_color = color
 
-def klik(event):
-    x, y = event.x, event.y
-    canvas.create_oval(x - 10, y - 10, x + 10, y + 10, fill=current_color)
+def choose_color():
+    color_code = colorchooser.askcolor(title="Choose color")
+    if color_code:
+        change_color(color_code[1])
+    else:
+        return
 
 def tahaj(event):
-    x = velkost.get()
-    y = velkost.get()
+    try:
+        size = int(entry.get())
+    except ValueError:
+        size = velkost.get()
     x, y = event.x, event.y
-    canvas.create_oval(x - 5, y - 5, x + 5, y + 5, fill=current_color, outline=current_color)
-
-
+    canvas.create_oval(x - size, y - size, x + size, y + size, fill=current_color, outline=current_color)
 
 canvas = tk.Canvas()
 canvas.pack(side='left')
-canvas.bind('<ButtonPress>', klik)
 canvas.bind('<B1-Motion>', tahaj)
 
 def delete():
     canvas.delete("all")
 
-
 tk.Button(text="Vymazať", command=delete).pack()
 
-red_button = tk.Button( width=5,background="red", command=lambda: change_color('red'))
-red_button.pack()
+tk.Button(text="Vyber farbu", command=choose_color).pack()
 
-blue_button = tk.Button( width=5,background="Blue", command=lambda: change_color('blue'))
-blue_button.pack()
+entry = tk.Entry()
+entry.pack()
+entry.insert(0, "Zadaj veľkosť:")
+entry.bind('<FocusIn>', on_entry_click)
+entry.bind('<KeyRelease>', update_scale)
 
-green_button = tk.Button( width=5,background="Green", command=lambda: change_color('green'))
-green_button.pack()
-
-tk.Label(text='Zmeň veľkosť:').pack()
-velkost = tk.Scale(orient='horizontal', from_=10, to=40, length=75)
+velkost = tk.Scale(orient='horizontal', from_=1, to=40, length=75)
 velkost.pack()
-
 
 tk.mainloop()
