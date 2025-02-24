@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import colorchooser
 
+
+
 current_color = 'red'
 
 def on_entry_click(event):
@@ -40,6 +42,7 @@ def tahaj(event):
 canvas = tk.Canvas(width=700, height=500)
 canvas.pack(side='left')
 canvas.bind('<B1-Motion>', tahaj)
+canvas.config(bg="White")
 
 def delete():
     canvas.delete("all")
