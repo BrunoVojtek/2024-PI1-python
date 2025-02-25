@@ -51,7 +51,7 @@ def delete():
 
 tk.Button(text="Vyber farbu", command=choose_color).pack()
 tk.Button(text="Vymazať", command=delete).pack()
-tk.Button(text="Guma", background="white", command=lambda: change_color("White")).pack()
+tk.Button(text="Guma", command=lambda: change_color("White")).pack()
 
 entry = tk.Entry()
 entry.pack()
