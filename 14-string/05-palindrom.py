@@ -2,6 +2,8 @@
 
 works = True
 
+print("Pre skončenie programu napíš stop")
+
 while works:
     ret = input("Zadaj reťazec: ")
     obrateny = ret[::-1]
