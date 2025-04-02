@@ -12,7 +12,7 @@ for slovo in slova:
     y = random.randint(10, 500)
     for pismeno in slovo:
         farba_pismena = f'#{random.randint(0, 255):02x}{random.randint(0, 255):02x}{random.randint(0, 255):02x}'
-        c.create_text(x, y, fill=farba_pismena, text=pismeno)
+        c.create_text(x, y, fill=farba_pismena, text=pismeno, font="Arial, 20")
         x += 20  
 
 tk.mainloop()
