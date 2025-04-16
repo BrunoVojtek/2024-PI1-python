@@ -25,6 +25,22 @@ for i in range(pocet_dni):
     if teploty[i] < priemerna_teplota:
         print(f'Dni s podpriemernou teplotou: {teploty[i]}°C')
 
+# Funkcia na zistenie minimalnej teploty
+def minimalna_teplota(teploty):
+    minimalna_teplota = teploty[0]
+    for teplota in teploty:
+        if teplota < minimalna_teplota:
+            minimalna_teplota = teplota
+    return minimalna_teplota
 
+# Funkcia na zistenie maximalnej teploty
+def maximalna_teplota(teploty):
+    maximalna_teplota = teploty[0]
+    for teplota in teploty:
+        if teplota > maximalna_teplota:
+            maximalna_teplota = teplota
+    return maximalna_teplota
 
+print(f"Minimálna teplota v mesiaci je: {minimalna_teplota(teploty)}°C")
+print(f"Maximálna teplota v mesiaci je: {maximalna_teplota(teploty)}°C")
 
