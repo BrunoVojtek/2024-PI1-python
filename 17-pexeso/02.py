@@ -18,8 +18,8 @@ def kontrola_kariet():
 
     if prva_index is not None and druha_index is not None:
         if cisla[prva_index] == cisla[druha_index]:
-            stav["tlacidla"][prva_index]["state"] = "dissabled"
-            stav["tlacidla"][druha_index]["state"] = "dissabled"
+            stav["tlacidla"][prva_index]["state"] = "disabled"
+            stav["tlacidla"][druha_index]["state"] = "disabled"
         else:
             stav["tlacidla"][prva_index]["text"] = ""
             stav["tlacidla"][druha_index]["text"] = ""
@@ -33,7 +33,7 @@ def klik(index):
     elif stav["druha_karta"] is None and index != stav["prva_karta"]:
         stav["druha_karta"] = index
         stav["tlacidla"][index]["text"] = str(cisla[index])
-    root.after(1000, kontrola_kariet)
+    root.after(2000, kontrola_kariet)
 
 for i in range(4):
     for j in range(4):
@@ -41,5 +41,7 @@ for i in range(4):
         button = tk.Button(root, text="", width=6, height=3, command= lambda idx = index: klik(idx))
         button.grid(row=i, column=j)
         stav["tlacidla"].append(button)
+
+
 
 tk.mainloop()        
