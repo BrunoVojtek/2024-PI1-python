@@ -4,8 +4,8 @@ root = tk.Tk()
 c = tk.Canvas(root, width=400, height=400)
 c.pack()
 
-with open("body.txt", "r") as fbody:
-    riadky = fbody.readlines()
+fbody = open("body.txt", "r") 
+riadky = fbody.readlines()
 
 for i in range(0, len(riadky), 3):
     obrys = riadky[i].strip()
