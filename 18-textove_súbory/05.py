@@ -1,7 +1,7 @@
 import tkinter as tk
 
-root = tk.Tk()
-c = tk.Canvas(root, width=400, height=400)
+r = tk.Tk()
+c = tk.Canvas(r, width=400, height=400)
 c.pack()
 
 fbody = open("body.txt", "r") 
@@ -22,4 +22,4 @@ for i in range(0, len(riadky), 3):
         c.create_rectangle(x - 5, y - 5, x + 5, y + 5, fill=farba)
 
 
-root.mainloop()
+r.mainloop()
